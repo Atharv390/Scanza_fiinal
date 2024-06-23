@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup - Scanza</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="/">Scanza</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <a href="{{ url_for('signup') }}" class="btn ">Signup</a>
+                        <a href="{{ url_for('login') }}" class="btn ">Login</a>
+                </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="menu-items-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2>Menu Items</h2>
+                    {% if items %}
+                        <ul class="list-group">
+                            {% for item in items %}
+                                <li class="list-group-item">
+                                    <h4>{{ item.item_name }}</h4>
+                                    <p>{{ item.item_description }}</p>
+                                    <p><strong>Price:</strong> ${{ item.item_price }}</p>
+                                    <p><strong>Restaurant:</strong> {{ item.restaurant_name }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>No menu items found.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanza</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo.png') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="#"> <img src="{{ url_for('static', filename='logo.png') }}" alt="Scanza Logo" class="logonav"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#how-to-use">How to Use</a></li>
+                        <li><a href="/menu_items">Menu Item</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if 'username' in session %}
+                            <a class="btn" href="{{ url_for('menu_form') }}">Menu Form</a>
+                            <a href="{{ url_for('logout') }}" class="btn btn-default">Logout</a>
+                        {% else %}
+                            <a href="{{ url_for('signup') }}" class="btn ">Signup</a>
+                            <a href="{{ url_for('login') }}" class="btn ">Login</a>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="intro" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center cont">
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="Scanza Logo" class="logo">
+                    <h1>Welcome to Scanza</h1>
+                    <p>Your ultimate QR code menu solution</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>About Scanza</h2>
+                    <p>Scanza is a modern solution for restaurants to provide digital menus through QR codes. It helps reduce paper waste, offers easy updates, and enhances the customer experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-to-use" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>How to Use Scanza</h2>
+                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                        <ol>
+                            <li><p class="text-gray-800 text-base px-6 mb-5">Scan the QR code placed on the table using your smartphone camera.</p></li>
+                            <li><p class="text-gray-800 text-base px-6 mb-5">Open the link that appears on your screen.</p></li>
+                            <li><p class="text-gray-800 text-base px-6 mb-5">Browse the digital menu and place your order with ease.</p></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Benefits of Using Scanza</h2>
+                    <div class="w-full font-bold text-xl text-gray-800 px-6">
+                        <ol>
+                        <li><p class="text-gray-800 text-base px-6 mb-5">Reduces paper waste and is eco-friendly.</p></li>
+                        <li><p class="text-gray-800 text-base px-6 mb-5">Instant updates to the menu without reprinting costs.</p></li>
+                        <li><p class="text-gray-800 text-base px-6 mb-5">Enhances customer experience with interactive menus.</p></li>
+                        <li><p class="text-gray-800 text-base px-6 mb-5">Improves hygiene by minimizing physical contact.</p></li>
+                        <li><p class="text-gray-800 text-base px-6 mb-5">Provides detailed dish descriptions and images.</p></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="contact" class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions, feel free to reach out to us:</p>
+                    <p>Email: info@scanza.com</p>
+                    <p>Phone: +1-234-567-890</p>
+                    <p>Address: 123 Scanza Street, Food City, FC 12345</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

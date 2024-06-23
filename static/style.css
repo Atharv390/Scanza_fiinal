@@ -1,0 +1,229 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #f8f8f8;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+.btn {
+    background-color: blue; /* Initial background color */
+    color: white; /* Initial text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.btn:hover {
+    background-color: white; /* Background color on hover */
+    color: blue; /* Text color on hover */
+    border: 1px solid blue; /* Optional: Add a border to define the button shape on hover */
+}
+
+.navbar-nav li a {
+    color: #2b6bc5 !important;
+    font-weight: bold;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a:focus {
+    color: #f7fcff !important;
+}
+
+
+.navbar-toggle {
+    border-color: #fff;
+}
+
+.icon-bar {
+    background-color: #fff;
+}
+
+.intro {
+    background: url(https://media.istockphoto.com/id/1169276040/vector/neon-blue-coloured-half-tone-vector-background-illustration.jpg?s=612x612&w=0&k=20&c=mH7cK8hXepaG2h9ipgJ7gxX5Wb6ZLtgR_1AVFgRRYQY=) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight:bold;
+}
+
+.intro p {
+    font-size: 24px;
+}
+
+.content-section {
+    padding: 40px 0;
+    background-color: #ffffff;
+    border: 4px solid rgb(23, 54, 126);
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight:bold;
+
+}
+
+.content-section p,
+.content-section ul {
+    text-align: center;
+    font-size: 18px;
+}
+
+.content-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.text-xl {
+    font-size: 24px;
+}
+.icon{
+    height: 50px;
+    width: 100px;
+}
+.text-gray-800 {
+    color: #333;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.text-base {
+    font-size: 1rem;
+}
+
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+.login-page {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+}
+
+.login-form .form-control {
+    height: 40px;
+    font-size: 16px;
+}
+
+.login-form .btn-primary {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+}
+
+.login-form p {
+    margin-top: 20px;
+}
+
+.login-form p a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.login-form p a:hover,
+.login-form p a:focus {
+    text-decoration: underline;
+}
+.signup-page {
+    background-color: #f9f9f9;
+    padding: 60px 0;
+}
+
+.signup-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-form .form-group {
+    margin-bottom: 15px;
+}
+
+.signup-form .form-control {
+    height: 40px;
+    font-size: 16px;
+}
+
+.signup-form .btn-primary {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+}
+
+.signup-form p {
+    margin-top: 20px;
+}
+
+.signup-form p a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.signup-form p a:hover,
+.signup-form p a:focus {
+    text-decoration: underline;
+}
+.logonav{
+    max-height: 50px;
+    height: auto;
+    margin-top: -15px;
+    margin-left: 10px;
+}
